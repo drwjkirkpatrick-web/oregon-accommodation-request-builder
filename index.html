@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oregon Accommodation Request Builder</title>
+  <meta name="description" content="A private, unofficial helper for Oregon state employees: answer a few questions and copy a complete, well-structured workplace accommodation request for your manager. Nothing you type is stored or sent anywhere.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%232D6A4F'/%3E%3Ctext%20x='32'%20y='44'%20font-size='36'%20font-family='Georgia,serif'%20text-anchor='middle'%20fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to the form</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <p class="kicker">A private tool for Oregon state employees</p>
+      <h1>Accommodation Request Builder</h1>
+      <p class="tagline">Answer a few questions and get a complete, well-structured request to paste into an email or document for your manager &mdash; with everything your manager needs to forward to HR / Employee Services on the first pass.</p>
+      <p class="chips">
+        <span class="chip">No data stored or sent</span>
+        <span class="chip">Runs entirely in your browser</span>
+        <span class="chip">Unofficial &middot; not legal advice</span>
+      </p>
+    </div>
+  </header>
+
+  <main id="app" class="wrap" aria-live="polite">
+    <noscript>
+      <div class="card">
+        <h2>This tool needs JavaScript</h2>
+        <p>Because it stores nothing, it does all its work on your device, which needs JavaScript enabled.</p>
+        <p>You can request an accommodation without this tool: tell your manager or HR, in writing, what is difficult for you, what you are asking for, and how long you expect to need it. Employees are not required to use a form. Oregon&rsquo;s official sample request form is available from DAS:
+        <a href="https://www.oregon.gov/das/HR/Documents/Sample_reasonable_accomodation_request.docx" rel="noopener">Sample Reasonable Accommodation Request (docx)</a>.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <h2>Grounded in Oregon policy and law</h2>
+      <ul class="sources">
+        <li><a href="https://www.oregon.gov/das/Policies/50-020-10.pdf" rel="noopener">DAS Statewide Policy 50.020.10</a> &mdash; ADA and Reasonable Accommodation in Employment (effective 3/21/2025)</li>
+        <li><a href="https://www.oregon.gov/das/Policies/60-000-30.pdf" rel="noopener">DAS Statewide Policy 60.000.30</a> &mdash; Expression of Milk and Unpaid Rest Periods (effective 11/01/2024)</li>
+        <li><a href="https://oregon.public.law/statutes/ors_659a.112" rel="noopener">ORS 659A.112</a> (disability) &middot; <a href="https://oregon.public.law/statutes/ors_659a.147" rel="noopener">659A.146&ndash;.147</a> (pregnancy) &middot; <a href="https://oregon.public.law/statutes/ors_659a.033" rel="noopener">659A.033</a> (religious) &middot; <a href="https://oregon.public.law/statutes/ors_653.077" rel="noopener">653.077</a> (expressing milk)</li>
+        <li><a href="https://secure.sos.state.or.us/oard/view.action?ruleNumber=839-006-0206" rel="noopener">OAR 839-006-0206</a> &mdash; Reasonable Accommodation (BOLI administrative rule)</li>
+        <li><a href="https://www.oregon.gov/boli/workers/Pages/pregnancy-and-nursing-accommodations.aspx" rel="noopener">BOLI: Pregnancy accommodations at work</a> &middot; <a href="https://www.oregon.gov/boli/workers/pages/breaks-to-express-breast-milk.aspx" rel="noopener">Breaks to express breast milk</a></li>
+        <li><a href="https://www.oregon.gov/das/HR/Documents/Sample_reasonable_accomodation_request.docx" rel="noopener">DAS sample Reasonable Accommodation Request form</a> &mdash; the field set this tool mirrors</li>
+      </ul>
+      <p class="disclaimer">Unofficial community tool. Not affiliated with the State of Oregon, not legal advice, and not a substitute for your agency&rsquo;s own procedures &mdash; those always govern. Completing a form is not required to request an accommodation; verbal requests are equally valid under Statewide Policy 50.020.10. If you need legal advice, consult an attorney. BOLI also answers questions and takes complaints: 971-245-3844.</p>
+      <p class="fineprint">Source code: <a href="https://github.com/drwjkirkpatrick-web/oregon-accommodation-request-builder" rel="noopener">github.com/drwjkirkpatrick-web/oregon-accommodation-request-builder</a> &middot; MIT license</p>
+    </div>
+  </footer>
+
+  <pre id="printArea" class="print-only" aria-hidden="true"></pre>
+
+  <script src="/js/accommodation.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
