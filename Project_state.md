@@ -1,7 +1,7 @@
 # Project State: Oregon Accommodation Request Builder
 
 > **Last updated:** 2026-11-18
-> **Current phase:** build → publish (finishing loop in progress)
+> **Current phase:** maintenance (v1.0 shipped)
 > **Overall health:** green
 
 ---
@@ -22,9 +22,10 @@ No storage of any kind; answers live only in the open browser tab.
 - [x] js/app.js + css/styles.css + index.html — wizard UI, strict CSP (`default-src 'none'`)
 - [x] test/generate.test.mjs — 12 tests, all green (`node --test test/generate.test.mjs`)
 - [x] Browser walkthrough — 11 employee + 6 manager content checks pass, 0 page errors, 0px mobile overflow; detached-textarea bug found and fixed
+- [x] Published: GitHub repo + Vercel production deploy verified live (200, headers, assets)
 
 ### In Progress
-- [ ] Finish loop: commit → GitHub repo → push to main → Vercel deploy → live verification
+- (none — v1.0 shipped)
 
 ### Not Started
 - [ ] (future, optional) Spanish translation; agency-customizable contact block
@@ -47,19 +48,28 @@ No storage of any kind; answers live only in the open browser tab.
 
 ## 5. Next Step (only ONE)
 
-> **Next:** Commit, create `drwjkirkpatrick-web/oregon-accommodation-request-builder`, push to `main`, deploy to Vercel, verify the live URL with curl.
+> **Next:** Nothing queued. Possible future work: Spanish translation; agency-customizable contact block.
 
 ## 6. Environment & Tooling Notes
 
 - Node v22.22.2 — `node --test` needs the explicit file path (`test/generate.test.mjs`); a bare `test/` dir argument fails with MODULE_NOT_FOUND on this version
 - Local preview: `/usr/bin/python3.10 -m http.server 8090 --bind 127.0.0.1` from repo root (page uses absolute asset paths — file:// looks bare)
-- Vercel CLI logged in as drwjkirkpatrick-3155; gh auth green with repo scope
-- Citation ledger: `.hermes/citations/ledger.json` (local only, gitignored via .vercel-style exclusions — sources are committed in docs/RESEARCH.md)
-- Hermes skill used: web-design-artifacts, grounded-citations, software-development-workflows, project-state-management
+- Citation ledger: `.hermes/citations/ledger.json` (local only, gitignored — sources committed in docs/RESEARCH.md)
+- Hermes skills used: web-design-artifacts, grounded-citations, software-development-workflows, project-state-management
+
+### Vercel deploy notes (learned the hard way, 2026-11-18)
+- Project: **oregon-accommodation-request** (renamed from the long repo name)
+- Vercel's default production domain truncates long project names — the clean URL
+  is an alias: **https://oregon-accommodation-request.vercel.app**
+- `vercel alias set` binds an alias to ONE deployment — **after every
+  `vercel deploy --prod`, re-run:** `vercel alias set <new-deployment-url> oregon-accommodation-request`
+- Team SSO protection (`all_except_custom_domains`) blocked anonymous access on the
+  new alias; fixed with `vercel project protection disable oregon-accommodation-request --sso`
+  (keep it OFF — this tool must be reachable without login)
 
 ## 7. Recent Session Log
 
-- 2026-11-18: Researched 14 Oregon sources; built the full static site; 12 node tests green; in-browser walkthrough caught and fixed a detached-textarea population bug; geometry + content checks green desktop and 360px mobile.
+- 2026-11-18: Researched 14 Oregon sources; built the full static site; 12 node tests green; in-browser walkthrough caught and fixed a detached-textarea population bug; geometry + content checks green desktop and 360px mobile. Published to GitHub + Vercel (SSO protection disabled, clean alias set, live URL verified with curl).
 
 ## 8. References
 

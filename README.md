@@ -2,6 +2,8 @@
 
 A free, private web tool that helps **Oregon state employees** ask for a workplace accommodation — and get it right the first time.
 
+**Live at [oregon-accommodation-request.vercel.app](https://oregon-accommodation-request.vercel.app)**
+
 ## The problem it solves
 
 Requesting an accommodation at work usually starts a slow relay: you email your manager, your manager forwards to HR / Employee Services, HR writes back for a missing detail, and everyone waits. The fix is simple — put *everything the whole chain needs* into the very first message.
